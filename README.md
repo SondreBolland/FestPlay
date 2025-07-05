@@ -47,7 +47,7 @@ All from a user-friendly web interface — no API keys or technical setup requir
 
 ---
 
-##  Screenshots (optional)
+##  Screenshots
 
 <img width=700 src="images/home_page.png">
 <img width=700 src="images/create_playlist.png">  
