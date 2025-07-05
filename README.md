@@ -1,4 +1,4 @@
-#  Festival Playlist Generator (Web App)
+# FestPlay - Festival Playlist Generator (Web App)
 
 **Get ready for your next festival or concert!**
 This web app helps you generate personalized Spotify playlists based on what your favorite artists most frequently perform live.
