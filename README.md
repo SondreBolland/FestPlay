@@ -49,7 +49,9 @@ All from a user-friendly web interface — no API keys or technical setup requir
 
 ##  Screenshots (optional)
 
-*Screenshots coming.*
+<img width=700 src="images/home_page.png">
+<img width=700 src="images/create_playlist.png">  
+<img width=700 src="images/add_artist.png">  
 
 ---
 
