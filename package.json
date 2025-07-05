@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "thread-loader": "^4.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.1"
+  }
+}

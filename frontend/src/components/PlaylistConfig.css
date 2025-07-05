@@ -1,0 +1,173 @@
+.playlist-config-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+}
+
+.main-content-area {
+  flex: 2;
+  position: relative;
+  background: linear-gradient(-45deg, #40e0d0, #ff8c00, #ff0080);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form-pane {
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  max-height: 90vh;
+  width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.right-pane {
+  width: 430px;
+  padding: 2rem;
+  background: #f9f9f9;
+  overflow-y: auto;
+  border-left: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.config-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.status-message {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: green;
+}
+
+.playlist-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.playlist-form .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.playlist-form input[type="text"],
+.playlist-form input[type="number"],
+.playlist-form select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.playlist-form select[multiple] {
+  height: 150px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+.submit-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.add-artist-button {
+  width: 100%;
+  padding: 1.5rem 3rem;
+  border-radius: 16px;
+  background-color: #1e90ff !important;
+  color: white !important;
+  border: none;
+  text-transform: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.add-artist-button:hover {
+  background-color: #1c5fee !important;
+  transform: scale(1.03);
+}
+
+#status-msg {
+  white-space: pre-wrap;
+}
+
+.header-row {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 3rem; /* or whatever height your header needs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.config-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.back-button-container {
+  position: absolute;
+  right: 0;
+}
+
+.back-button {
+  padding: 1.5rem 3rem;
+  border-radius: 16px;
+  background-color: #1e90ff !important;
+  color: white !important;
+  border: none;
+  text-transform: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: #1c5fee !important;
+  transform: scale(1.03);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
