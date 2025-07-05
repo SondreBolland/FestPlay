@@ -19,11 +19,10 @@ All from a user-friendly web interface — no API keys or technical setup requir
 *  **Search and add artists** using the [MusicBrainz](https://musicbrainz.org/) database
 *  **View top live songs** each artist plays most often
 *  **Smart playlist generator**:
-
-  * Choose how many songs to include per artist
-  * Optionally include multiple artists in one playlist
+   * Choose how many songs to include per artist
+   * Optionally include multiple artists in one playlist
 *  **Spotify login and playlist creation**
-*  Built with **Django (backend)** and **React (frontend)**
+   *  uilt with **Django (backend)** and **React (frontend)**
 
 ---
 
@@ -42,16 +41,15 @@ All from a user-friendly web interface — no API keys or technical setup requir
 * **Frontend**: React + Vite + Tailwind CSS
 * **Backend**: Django + Django REST Framework
 * **Data sources**:
-
-  * [MusicBrainz](https://musicbrainz.org) (for artist search)
-  * [setlist.fm](https://www.setlist.fm) (for live song data)
-  * [Spotify Web API](https://developer.spotify.com) (for playlist creation)
+   * [MusicBrainz](https://musicbrainz.org) (for artist search)
+   * [setlist.fm](https://www.setlist.fm) (for live song data)
+   * [Spotify Web API](https://developer.spotify.com) (for playlist creation)
 
 ---
 
 ##  Screenshots (optional)
 
-*Add screenshots here if you'd like — e.g., artist search, playlist creation confirmation, etc.*
+*Screenshots coming.*
 
 ---
 
@@ -93,12 +91,6 @@ Make sure the frontend is set up to proxy API calls to the Django server.
 ## 🙋 Who is this for?
 
 Anyone preparing for concerts or festivals — music fans who want to get familiar with the songs they’re most likely to hear live!
-
----
-
-## License
-
-MIT License (or specify your preferred license)
 
 ---
 
