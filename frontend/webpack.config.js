@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "./static/frontend"),
     filename: "[name].js",
     clean: true, // cleans output dir before build (webpack 5 feature)
-    publicPath: '/festplay/',
+    publicPath: "/festplay/",
   },
   module: {
     rules: [
@@ -44,6 +44,8 @@ module.exports = {
     }),
   ],*/
   resolve: {
-    extensions: [".js"], // resolve only js by default (faster)
+    alias: {
+      "@mui/styled-engine": "@mui/styled-engine-sc",
+    },
   },
 };
