@@ -119,11 +119,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#FORCE_SCRIPT_NAME = '/festplay'
+FORCE_SCRIPT_NAME = '/festplay'
+#STATIC_URL = 'static/'
+STATIC_URL = '/festplay/static/'
+MEDIA_URL = '/festplay/media/'

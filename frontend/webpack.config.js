@@ -19,6 +19,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
       },
       {
         test: /\.css$/i,
@@ -35,8 +41,6 @@ module.exports = {
     }),
   ],*/
   resolve: {
-    alias: {
-      "@mui/styled-engine": "@mui/styled-engine-sc",
-    },
+    
   },
 };
