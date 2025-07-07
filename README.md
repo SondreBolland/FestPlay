@@ -17,8 +17,8 @@ All from a user-friendly web interface — no API keys or technical setup requir
 ##  Features
 
 *  **Search and add artists** using the [MusicBrainz](https://musicbrainz.org/) database
-*  **View top live songs** each artist plays most often
-*  **Smart playlist generator**:
+*  **View top live songs** each artist plays most often taken from [setlist.fm](https://www.setlist.fm/)
+*  **Playlist generator**:
    * Choose how many songs to include per artist
    * Optionally include multiple artists in one playlist
 *  **Spotify login and playlist creation**
@@ -28,7 +28,7 @@ All from a user-friendly web interface — no API keys or technical setup requir
 
 ##  How It Works
 
-1. **Search and add artists** to your selection using a powerful MusicBrainz-integrated search.
+1. **Search and add artists** to your selection using a MusicBrainz-integrated search.
 2. **Browse their most frequently played songs** based on recent setlist.fm data.
 3. **Log in to Spotify** securely.
 4. **Choose how many songs** you want from each artist.
@@ -47,9 +47,11 @@ All from a user-friendly web interface — no API keys or technical setup requir
 
 ---
 
-##  Screenshots (optional)
+##  Screenshots
 
-*Screenshots coming.*
+<img width=700 src="images/home_page.png">
+<img width=700 src="images/create_playlist.png">  
+<img width=700 src="images/add_artist.png">  
 
 ---
 
@@ -63,9 +65,12 @@ If self-hosting:
 
 ```bash
 cd backend
-pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+```
+Should be added:
+```
+pip install -r requirements.txt
 ```
 
 ### Frontend (React)
@@ -85,12 +90,6 @@ Make sure the frontend is set up to proxy API calls to the Django server.
 * All API keys are handled server-side. Users **do not** need to register with setlist.fm or Spotify.
 * The app caches setlist data to reduce API usage and improve performance.
 * Django handles Spotify OAuth securely and issues tokens needed for playlist generation.
-
----
-
-## 🙋 Who is this for?
-
-Anyone preparing for concerts or festivals — music fans who want to get familiar with the songs they’re most likely to hear live!
 
 ---
 
