@@ -39,7 +39,7 @@ export default function ArtistList() {
   return (
     <div className="artist-list">
       <div className="artist-header-row">
-        <h2>Artist's Most Played Songs</h2>
+        <h2>Artists' Most Played Songs</h2>
         <SetlistInfoTooltip />
       </div>
       <ul>
