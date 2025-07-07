@@ -19,15 +19,6 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          "thread-loader", // parallelize babel-loader
-          {
-            loader: "babel-loader",
-            options: {
-              cacheDirectory: true, // enable babel caching
-            },
-          },
-        ],
       },
       {
         test: /\.css$/i,
