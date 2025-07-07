@@ -38,11 +38,11 @@ module.exports = {
   optimization: {
     minimize: false, // disable minimization in dev for faster builds
   },
-  plugins: [
+  /*plugins: [
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("development"),
     }),
-  ],
+  ],*/
   resolve: {
     extensions: [".js"], // resolve only js by default (faster)
   },
