@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "./static/frontend"),
     filename: "[name].js",
     clean: true, // cleans output dir before build (webpack 5 feature)
+    publicPath: '/festplay/',
   },
   module: {
     rules: [
