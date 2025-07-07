@@ -11,8 +11,8 @@ export default class App extends Component {
       <Router basename="/festplay">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/playlist-config" element={<PlaylistConfig />} />
-          <Route path="/add-artist" element={<AddArtistPage />} />
+          <Route path="playlist-config" element={<PlaylistConfig />} />
+          <Route path="add-artist" element={<AddArtistPage />} />
         </Routes>
       </Router>
     );
