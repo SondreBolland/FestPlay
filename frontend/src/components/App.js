@@ -8,11 +8,11 @@ import AddArtistPage from "./AddArtistPage";
 export default class App extends Component {
   render() {
     return (
-      <Router basename="/festplay">
+      <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="playlist-config" element={<PlaylistConfig />} />
-          <Route path="add-artist" element={<AddArtistPage />} />
+          <Route path="/playlist-config" element={<PlaylistConfig />} />
+          <Route path="/add-artist" element={<AddArtistPage />} />
         </Routes>
       </Router>
     );
