@@ -71,6 +71,10 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATES[0]['OPTIONS']['context_processors'] += [
+    'django.template.context_processors.request',
+]   
+
 WSGI_APPLICATION = 'festival_playlist_generator.wsgi.application'
 
 
@@ -129,3 +133,5 @@ FORCE_SCRIPT_NAME = '/festplay'
 #STATIC_URL = 'static/'
 STATIC_URL = '/festplay/static/'
 MEDIA_URL = '/festplay/media/'
+
+STATICFILES_DIRS = [BASE_DIR / "frontend" / "static"]
