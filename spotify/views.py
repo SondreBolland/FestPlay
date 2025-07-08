@@ -41,7 +41,8 @@ def spotify_callback(request, format=None):
         'client_id': SPOTIPY_CLIENT_ID,
         'client_secret': SPOTIPY_CLIENT_SECRET
     }).json()
-    
+    print("Redirect URI used:", response.get('redirect_uri'))
+
     access_token = response.get('access_token')
     token_type = response.get('token_type')
     refresh_token = response.get('refresh_token')
