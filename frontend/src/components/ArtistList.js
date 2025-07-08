@@ -24,7 +24,7 @@ export default function ArtistList() {
     setOpenArtistId(artistId);
 
     if (!topSongsByArtist[artistId]) {
-      fetch(`/festplay/api/top-songs/?artist=${artistId}/`)
+      fetch(`/festplay/api/top-songs/?artist=${artistId}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0 && data[0].n_setlists) {
@@ -88,7 +88,7 @@ export default function ArtistList() {
 
   async function handleRemoveArtist(artistId) {
     try {
-      const response = await fetch(`/festplay/api/artists/${artistId}/`, {
+      const response = await fetch(`/festplay/api/artists/${artistId}`, {
         method: "DELETE",
       });
 
