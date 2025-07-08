@@ -19,7 +19,7 @@ export default function PlaylistConfig() {
   useEffect(() => {
     authenticateSpotify();
 
-    fetch("/festplay/api/artists")
+    fetch("/festplay/api/artists/")
       .then((res) => res.json())
       .then((data) => setArtists(data))
       .catch(console.error);
