@@ -18,10 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('festplay/', include([
-        path('admin/', admin.site.urls),
-        path('api/', include('api.urls')),
-        path('spotify/', include('spotify.urls')),
-        path('', include('frontend.urls'))
-    ]))
+    path('festplay/admin/', admin.site.urls),
+    path('festplay/api/', include('api.urls')),
+    path('festplay/spotify/', include('spotify.urls')),
+    path('festplay/', include('frontend.urls')),
 ]
