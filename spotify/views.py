@@ -56,7 +56,7 @@ def spotify_callback(request, format=None):
     session_id = request.session.session_key
     update_or_create_user_tokens(session_id, access_token=access_token, token_type=token_type, refresh_token=refresh_token, expires_in=expires_in)
     
-    return redirect('/festplay/')
+    return redirect('/festplay/playlist-config')
 
 
 class IsAuthenticated(APIView):
