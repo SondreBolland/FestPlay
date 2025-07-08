@@ -27,7 +27,7 @@ class AuthURL(APIView):
             'redirect_uri': SPOTIPY_REDIRECT_URI,
             'client_id': SPOTIPY_CLIENT_ID
         }).prepare().url
-        
+        print("Redirect URI used:", url['redirect_uri'])
         return Response({'url': url}, status=status.HTTP_200_OK)
         
 def spotify_callback(request, format=None):
