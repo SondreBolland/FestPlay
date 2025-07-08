@@ -3,7 +3,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 from requests import Request, post
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
+from django.urls import reverse
 from pathlib import Path
 from .util import *
 from api.models import TopSong
@@ -55,7 +56,7 @@ def spotify_callback(request, format=None):
     session_id = request.session.session_key
     update_or_create_user_tokens(session_id, access_token=access_token, token_type=token_type, refresh_token=refresh_token, expires_in=expires_in)
     
-    return redirect('frontend:')
+    return redirect(reverse('frontend:index'))
 
 
 class IsAuthenticated(APIView):
