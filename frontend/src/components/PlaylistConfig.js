@@ -26,13 +26,13 @@ export default function PlaylistConfig() {
   }, []);
 
   const authenticateSpotify = () => {
-    fetch("/festplay/spotify/is-authenticated")
+    fetch("/festplay/spotify/is-authenticated/")
       .then((response) => response.json())
       .then((data) => {
         setSpotifyAuthenticated(data.status);
         console.log("Spotify authenticated:", data.status);
         if (!data.status) {
-          fetch("/festplay/spotify/get-auth-url")
+          fetch("/festplay/spotify/get-auth-url/")
             .then((response) => response.json())
             .then((data) => {
               window.location.replace(data.url);
