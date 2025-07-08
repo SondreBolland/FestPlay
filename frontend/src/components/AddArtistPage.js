@@ -16,7 +16,7 @@ function AddArtistPage() {
     if (!searchTerm.trim()) return;
 
     try {
-      const response = await axios.get("/api/artist-search/", {
+      const response = await axios.get("/festplay/api/artist-search/", {
         params: { q: searchTerm },
       });
       setSearchResults(response.data);
@@ -38,7 +38,7 @@ function AddArtistPage() {
 
     try {
       setStatusMessage(`⌛️🔄 Loading "${selectedArtist.name}" `);
-      const response = await axios.post("/api/add-artist/", {
+      const response = await axios.post("/festplay/api/add-artist/", {
         name: selectedArtist.name,
         mbid: selectedArtist.mbid,
       });

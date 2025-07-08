@@ -9,7 +9,7 @@ export default function ArtistList() {
   const [nSetlists, setNSetlists] = useState(null);
 
   useEffect(() => {
-    fetch("/api/artists")
+    fetch("/festplay/api/artists")
       .then((res) => res.json())
       .then((data) => setArtists(data))
       .catch(console.error);
@@ -24,7 +24,7 @@ export default function ArtistList() {
     setOpenArtistId(artistId);
 
     if (!topSongsByArtist[artistId]) {
-      fetch(`/api/top-songs/?artist=${artistId}`)
+      fetch(`/festplay/api/top-songs/?artist=${artistId}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0 && data[0].n_setlists) {

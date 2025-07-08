@@ -19,20 +19,20 @@ export default function PlaylistConfig() {
   useEffect(() => {
     authenticateSpotify();
 
-    fetch("/api/artists")
+    fetch("/festplay/api/artists")
       .then((res) => res.json())
       .then((data) => setArtists(data))
       .catch(console.error);
   }, []);
 
   const authenticateSpotify = () => {
-    fetch("/spotify/is-authenticated")
+    fetch("/festplay/spotify/is-authenticated")
       .then((response) => response.json())
       .then((data) => {
         setSpotifyAuthenticated(data.status);
         console.log("Spotify authenticated:", data.status);
         if (!data.status) {
-          fetch("/spotify/get-auth-url")
+          fetch("/festplay/spotify/get-auth-url")
             .then((response) => response.json())
             .then((data) => {
               window.location.replace(data.url);
@@ -68,7 +68,7 @@ export default function PlaylistConfig() {
       n_setlists_per_artist: Number(form.n_setlists_per_artist),
     };
 
-    fetch("/spotify/generate-playlist/", {
+    fetch("/festplay/spotify/generate-playlist/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
