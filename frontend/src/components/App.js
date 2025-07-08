@@ -1,6 +1,6 @@
+// App.js
 import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { render } from "react-dom";
 import HomePage from "./HomePage";
 import PlaylistConfig from "./PlaylistConfig";
 import AddArtistPage from "./AddArtistPage";
@@ -18,6 +18,3 @@ export default class App extends Component {
     );
   }
 }
-
-const appDiv = document.getElementById("app");
-render(<App />, appDiv);
