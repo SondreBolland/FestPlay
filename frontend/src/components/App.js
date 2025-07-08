@@ -8,7 +8,7 @@ import AddArtistPage from "./AddArtistPage";
 export default class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/festplay">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/playlist-config" element={<PlaylistConfig />} />
