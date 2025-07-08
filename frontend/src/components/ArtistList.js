@@ -81,7 +81,7 @@ export default function ArtistList() {
         ))}
       </ul>
       <div className="bottom">
-        <p>Made by <a href="https://www4.uib.no/finn-ansatte/Sondre.S%C3%A6ther.Bolland">Sondre Sæther Bolland</a></p>
+        <p>Made by <a href="https://sondrebolland.com">Sondre Sæther Bolland</a></p>
       </div>
     </div>
   );
