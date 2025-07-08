@@ -20,7 +20,7 @@ export default function SetlistInfoTooltip() {
         </span>
       }
       arrow
-      placement="right"
+      placement="left"
     >
       <InfoOutlinedIcon
         fontSize="small"

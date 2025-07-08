@@ -1,8 +1,38 @@
 .artist-list {
-  max-width: 700px;
+  width: 400px;
+  max-width: 100%;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem 0rem;
   position: relative;
+  align-items: center;
+}
+
+.add-artist-button {
+  width: 90%;
+  padding: 1.5rem 1rem;
+  border-radius: 16px;
+  background-color: #1e90ff !important;
+  color: white !important;
+  border: none;
+  text-transform: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.create-playlist-button:hover,
+.add-artist-button:hover {
+  background-color: #1c5fee !important;
+  transform: scale(1.03);
+}
+
+.artist-header-row {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .artist-card {
@@ -11,6 +41,18 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.artist-card:hover {
+  transform: scale(1.01);
+}
+
+.artist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .artist-name {
@@ -18,6 +60,7 @@
   font-weight: bold;
   cursor: pointer;
   color: #171717;
+  flex: 1;
 }
 
 .artist-name:hover {
@@ -25,8 +68,10 @@
 }
 
 .song-list {
-  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
   color: #1e1e1e;
+  font-size: 0.95rem;
 }
 
 ul {
@@ -34,45 +79,47 @@ ul {
   list-style-type: none;
 }
 
-.artist-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .remove-button {
   background: none;
   border: none;
   color: #4a0101;
-  font-size: 0.9em;
+  font-size: 1.2rem;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 .remove-button:hover {
   color: #ff0000;
 }
 
-.artist-header-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.artist-header-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
+  margin-top: 2rem;
+  text-align: center;
   color: #535050;
-
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
+  font-size: 0.9rem;
 }
 
+.bottom a {
+  color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .artist-list {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  }
+
+  .artist-name {
+    font-size: 1rem;
+  }
+
+  .remove-button {
+    font-size: 1rem;
+  }
+
+  .song-list {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

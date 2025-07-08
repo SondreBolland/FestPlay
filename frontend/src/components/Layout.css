@@ -1,0 +1,41 @@
+/* Default: Desktop layout */
+.homepage-container {
+  display: flex;
+  flex-direction: row; /* side-by-side */
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #40e0d0, #ff8c00, #ff0080);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: sans-serif;
+}
+
+.right-pane {
+  width: 300px;
+  padding: 2rem;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  min-height: 100vh;
+  align-items: center; /* centers content horizontally */
+}
+
+/* Responsive: Mobile layout */
+@media (max-width: 768px) {
+  .homepage-container {
+    flex-direction: column; /* stack vertically on small screens */
+  }
+
+  .right-pane {
+    width: 100%; /* Take full width on mobile */
+    padding: 0rem 0rem;   
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+    align-items: center; /* centers content horizontally */
+  }
+}
+
+.main-pane {
+  flex: 1;
+  padding: 2rem;
+  box-sizing: border-box;
+}

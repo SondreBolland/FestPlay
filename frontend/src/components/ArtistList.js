@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
-import SetlistInfoTooltip from "./SetlistInfoTooltip";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+
+import SetlistInfoTooltip from "../pages/SetlistInfoTooltip";
 import "./ArtistList.css";
+import { API_ROOT } from "../config";
 
 export default function ArtistList() {
   const [artists, setArtists] = useState([]);
@@ -9,7 +13,7 @@ export default function ArtistList() {
   const [nSetlists, setNSetlists] = useState(null);
 
   useEffect(() => {
-    fetch("/festplay/api/artists/")
+    fetch(`${API_ROOT}api/artists/`)
       .then((res) => res.json())
       .then((data) => setArtists(data))
       .catch(console.error);
@@ -24,7 +28,7 @@ export default function ArtistList() {
     setOpenArtistId(artistId);
 
     if (!topSongsByArtist[artistId]) {
-      fetch(`/festplay/api/top-songs/?artist=${artistId}`)
+      fetch(`${API_ROOT}api/top-songs/?artist=${artistId}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0 && data[0].n_setlists) {
@@ -38,6 +42,9 @@ export default function ArtistList() {
 
   return (
     <div className="artist-list">
+      <Button className="add-artist-button" to="/add-artist" component={Link}>
+        Add Artist
+      </Button>
       <div className="artist-header-row">
         <h2>Artists' Most Played Songs</h2>
         <SetlistInfoTooltip />
@@ -81,14 +88,16 @@ export default function ArtistList() {
         ))}
       </ul>
       <div className="bottom">
-        <p>Made by <a href="https://sondrebolland.com">Sondre Sæther Bolland</a></p>
+        <p>
+          Made by <a href="https://sondrebolland.com">Sondre Sæther Bolland</a>
+        </p>
       </div>
     </div>
   );
 
   async function handleRemoveArtist(artistId) {
     try {
-      const response = await fetch(`/festplay/api/artists/${artistId}/`, {
+      const response = await fetch(`${API_ROOT}api/artists/${artistId}/`, {
         method: "DELETE",
       });
 

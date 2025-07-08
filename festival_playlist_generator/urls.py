@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+root = 'festplay/' # festplay/
+
 urlpatterns = [
-    path('festplay/admin/', admin.site.urls),
-    path('festplay/api/', include('api.urls')),
-    path('festplay/spotify/', include('spotify.urls')),
-    path('festplay/', include('frontend.urls')),
-]
+    path(f'{root}admin/', admin.site.urls),
+    path(f'{root}api/', include('api.urls')),
+    path(f'{root}spotify/', include('spotify.urls')),
+    path(f'{root}', include('frontend.urls')), 
+]   
