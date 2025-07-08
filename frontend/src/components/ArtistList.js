@@ -88,7 +88,7 @@ export default function ArtistList() {
 
   async function handleRemoveArtist(artistId) {
     try {
-      const response = await fetch(`/festplay/api/artists/${artistId}`, {
+      const response = await fetch(`/festplay/api/artists/${artistId}/`, {
         method: "DELETE",
       });
 
