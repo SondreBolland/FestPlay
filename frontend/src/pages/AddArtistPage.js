@@ -1,9 +1,9 @@
-// src/pages/AddArtistPage.js
 import React, { useState } from "react";
 import axios from "axios";
 import { API_ROOT } from "../config";
 import { Button } from "@mui/material";
 import Layout from "../components/Layout";
+import ArtistList from "../components/ArtistList";
 import "./AddArtistPage.css";
 
 function AddArtistPage() {
@@ -57,66 +57,59 @@ function AddArtistPage() {
   };
 
   return (
-    <div className="main-pane">
-      <div className="add-artist-container">
-        <div className="back-button-right">
-          <Button
-            className="back-search-button"
-            onClick={() => window.history.back()}
-          >
-            Back
-          </Button>
-        </div>
-
-        <div className="search-artist-container">
-          <h2>Add Artist</h2>
-
-          <input
-            type="text"
-            placeholder="Search for an artist..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-          />
-          <button className="back-search-button" onClick={handleSearch}>
-            Search
-          </button>
-
-          {searchResults.length > 0 && (
-            <ul className="search-results">
-              {searchResults.map((artist, index) => (
-                <li
-                  key={index}
-                  className={
-                    selectedArtist?.mbid === artist.mbid ? "selected" : ""
-                  }
-                  onClick={() => handleSelect(artist)}
-                >
-                  {artist.name}
-                  {artist.disambiguation && ` (${artist.disambiguation})`}
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {selectedArtist && (
-            <div className="selected-artist">
-              <p>
-                Selected: <strong>{selectedArtist.name}</strong>
-              </p>
-              <button className="back-search-button" onClick={handleAddArtist}>
-                Add Artist
-              </button>
-            </div>
-          )}
-
-          {statusMessage && <p className="status-message">{statusMessage}</p>}
-        </div>
+    <div className="add-artist-container">
+      <div className="back-button-right">
+        <Button
+          className="back-search-button"
+          onClick={() => window.history.back()}
+        >
+          Back
+        </Button>
       </div>
-      <div className="desktop-only">
-        <div className="right-pane">
-          <ArtistList />
-        </div>
+
+      <div className="search-artist-container">
+        <h2>Add Artist</h2>
+
+        <input
+          type="text"
+          placeholder="Search for an artist..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+        />
+        <button className="back-search-button" onClick={handleSearch}>
+          Search
+        </button>
+
+        {searchResults.length > 0 && (
+          <ul className="search-results">
+            {searchResults.map((artist, index) => (
+              <li
+                key={index}
+                className={
+                  selectedArtist?.mbid === artist.mbid ? "selected" : ""
+                }
+                onClick={() => handleSelect(artist)}
+              >
+                {artist.name}
+                {artist.disambiguation && ` (${artist.disambiguation})`}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {selectedArtist && (
+          <div className="selected-artist">
+            <p>
+              Selected: <strong>{selectedArtist.name}</strong>
+            </p>
+            <button className="back-search-button" onClick={handleAddArtist}>
+              Add Artist
+            </button>
+          </div>
+        )}
+
+        {statusMessage && <p className="status-message">{statusMessage}</p>}
       </div>
     </div>
   );

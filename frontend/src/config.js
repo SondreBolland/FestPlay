@@ -1,1 +1,1 @@
-export const API_ROOT = '/festplay/'; // '/'; 
+export const API_ROOT = '/';  //'/festplay/'; 

@@ -6,9 +6,10 @@ import PlaylistConfig from "./pages/PlaylistConfigPage";
 import AddArtistPage from "./pages/AddArtistPage";
 
 export default class App extends Component {
+    //<Router basename="/festplay">
   render() {
     return (
-      <Router basename="/festplay">
+      <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/playlist-config" element={<PlaylistConfig />} />

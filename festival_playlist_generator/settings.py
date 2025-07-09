@@ -130,11 +130,13 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#STATIC_URL = 'static/'
+STATIC_URL = 'static/'
 
+'''
 FORCE_SCRIPT_NAME = '/festplay'
 STATIC_URL = '/festplay/static/'
 MEDIA_URL = '/festplay/media/'
 
 STATICFILES_DIRS = [BASE_DIR / "frontend" / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"  # For collectstatic
+'''
