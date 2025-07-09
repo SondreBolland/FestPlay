@@ -55,7 +55,7 @@ function AddArtistPage() {
   };
 
   return (
-    <Layout>
+    <div className="main-pane">
       <div className="add-artist-container">
         <div className="back-button-right">
           <Button
@@ -111,7 +111,7 @@ function AddArtistPage() {
           {statusMessage && <p className="status-message">{statusMessage}</p>}
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 
