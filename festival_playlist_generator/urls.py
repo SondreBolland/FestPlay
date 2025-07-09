@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-root = '' # festplay/
+root = 'festplay/' # festplay/
 
 urlpatterns = [
     path(f'{root}admin/', admin.site.urls),

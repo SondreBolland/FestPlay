@@ -9,7 +9,7 @@ export default class App extends Component {
     //<Router basename="/festplay">
   render() {
     return (
-      <Router>
+      <Router basename="/festplay">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/playlist-config" element={<PlaylistConfig />} />
