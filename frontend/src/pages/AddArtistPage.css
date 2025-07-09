@@ -69,3 +69,13 @@ button {
   text-align: right;
   margin-top: 2rem;
 }
+
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}

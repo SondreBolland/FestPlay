@@ -44,7 +44,9 @@ function AddArtistPage() {
       });
 
       if (response.status === 201) {
-        setStatusMessage(`✅ Artist "${selectedArtist.name}" added successfully.`);
+        setStatusMessage(
+          `✅ Artist "${selectedArtist.name}" added successfully.`
+        );
       } else if (response.status === 208) {
         setStatusMessage(`ℹ️ Artist "${selectedArtist.name}" already exists.`);
       }
@@ -109,6 +111,11 @@ function AddArtistPage() {
           )}
 
           {statusMessage && <p className="status-message">{statusMessage}</p>}
+        </div>
+      </div>
+      <div className="desktop-only">
+        <div className="right-pane">
+          <ArtistList />
         </div>
       </div>
     </div>
